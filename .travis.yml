@@ -1,0 +1,22 @@
+env:
+  global:
+    - ANDROID_NDK_VERSION=r17b
+    - ANDROID_NDK_HOME=${TRAVIS_BUILD_DIR}/android-ndk-${ANDROID_NDK_VERSION}
+    - PATH=${PATH}:${ANDROID_NDK_HOME}
+
+install:
+  - ./install-dependencies.sh
+
+script:
+  - $ANDROID_NDK_HOME/ndk-build
+  - ./build.sh
+
+after_success:
+  - tar -zcvf minitouch.tar.gz -C libs .
+
+deploy:
+  provider: npm
+  email: "gounthar@gmail.com"
+  api_key: $NPM_API_KEY
+    
+    

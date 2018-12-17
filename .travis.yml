@@ -22,3 +22,4 @@ deploy:
    - minitouch.tar.gz
   on:
     repo: SDCOAdvocates/minitouch
+    tags: true

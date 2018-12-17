@@ -8,5 +8,5 @@ unzip android-ndk-${ANDROID_NDK_VERSION}-linux-x86_64.zip
 echo "ANDROID_NDK_HOME set to $ANDROID_NDK_HOME"
 echo "PATH set to $PATH"
 gem install travis
-travis login --org --github-token $GITHUB_KEY
+#travis login --org --github-token $GITHUB_KEY
 #travis setup npm

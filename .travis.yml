@@ -19,6 +19,6 @@ deploy:
   api_key:
     secure: R2dv/SAeMNZIrEVUUZv4ncbNN88GmC32kJww2G+NjP0TJPrcqzwxI+c4v2NgZ7O/dPIDI/t60dyL35BOfMyskwYrFntM34dq/5Vya8XWoFqF1z8208iYT80OOxB15DBPkRxHiW7OVfLz2kcdDYcrxRfWDqtc2cXNu4jIZlL8uO3wh4y9GMWJPdY07FFUVJalo+TYfcGueRWbK5HmP9Z4QDjE1i0AFtMf5xOsA55qFlBGEmMSQjnuI/a7AkBr8okboze/QKeZgZKehQe7ob/eIUzjBd+dzlQuWE0hihSosM3BmxLEyki0BkddJIO8TvmPeftCQACtmZQkZFyx1P/sQPodrhMfKjgtjYMclxW9cJL/x8qVmWVFM/PZI+HKREArOxXZhrayQ13rnaI3Iahv9w4UKT8DBIKSqnikmiJuDF57Nhpal3p/9wS4Ngq261BmZJCMuFwWbb+vq4CMeMcxNPoAg7c62RTsF5OYUVrP8uMjVgr4tDgyf4tc4Q0SNoZY2GMbzJuIRrICTSZriKQKfJnmHgHFyK1IAoa40CiJkp343nOFp2s4WThyYj+CrOGdGi5b1hXT/5IagPbLkhKodqfViTWly3Mvr8iMjWuRkiTF+D5qrFfSPw80AG4jWKjpStJKg/kytL5HaZvYE9lY9PxbEGsvFbzl4LJRPrKpETE=
   file_glob: true
-  file: $TRAVIS_BUILD_DIR/**/*.gz
+  file: "${FILE_TO_UPLOAD}"
   on:
     repo: SDCOAdvocates/minitouch

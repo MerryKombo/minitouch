@@ -10,7 +10,7 @@ script:
 - "./build.sh"
 after_success:
 - find libs -name "*"
-- tar -zcvf minitouch.tar.gz -C libs .
+- tar -zcvf minitouch.tar.gz -C prebuilt .
 before_deploy: 
   - tar -tvzf minitouch.tar.gz
   - export FILE_TO_UPLOAD=$(ls _builds/*/*.tar.gz)

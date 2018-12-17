@@ -10,6 +10,7 @@ script:
 - "./build.sh"
 after_success:
 - tar -zcvf minitouch.tar.gz -C libs .
+before_deploy: "tar -tvzf minitouch.tar.gz"
 deploy:
   provider: releases
   overwrite: true

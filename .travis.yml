@@ -9,6 +9,7 @@ script:
 - "$ANDROID_NDK_HOME/ndk-build"
 - "./build.sh"
 after_success:
+- find libs -name "*"
 - tar -zcvf minitouch.tar.gz -C libs .
 before_deploy: 
   - tar -tvzf minitouch.tar.gz

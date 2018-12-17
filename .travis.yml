@@ -9,10 +9,9 @@ script:
 - "$ANDROID_NDK_HOME/ndk-build"
 - "./build.sh"
 after_success:
-- find libs -name "*"
 - tar -zcvf minitouch.tar.gz -C prebuilt .
 before_deploy: 
-  - tar -tvzf minitouch.tar.gz
+  - tar -tvzf minitouch.tar.gz && ls -artl minitouch.tar.gz
   - export FILE_TO_UPLOAD=$(ls _builds/*/*.tar.gz)
 deploy:
   provider: releases

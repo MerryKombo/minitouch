@@ -12,7 +12,7 @@ after_success:
 - tar -zcvf minitouch.tar.gz -C prebuilt .
 before_deploy: 
   - tar -tvzf minitouch.tar.gz && ls -artl minitouch.tar.gz
-  - export FILE_TO_UPLOAD=$(ls _builds/*/*.tar.gz)
+  - export FILE_TO_UPLOAD=$(ls **/*.tar.gz)
 deploy:
   provider: releases
   overwrite: true

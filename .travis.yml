@@ -12,6 +12,11 @@ after_success:
 - tar -zcvf minitouch.tar.gz -C prebuilt .
 before_deploy: 
   - tar -tvzf minitouch.tar.gz && ls -artl minitouch.tar.gz
+    # Set up git user name and tag this commit
+  - git config --local user.name "gounthar"
+  - git config --local user.email "gounthar@gmail.com"
+  - export TRAVIS_TAG=${TRAVIS_TAG:-$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)}
+  - git tag $TRAVIS_TAG
 deploy:
   provider: releases
   overwrite: true
